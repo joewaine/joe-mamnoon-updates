@@ -13,12 +13,16 @@ return array(
 	),
 
 	'localhost:8888' => array(
-		'siteUrl' => 'http://localhost:8888/',
+    //    'localhost:8888/joe-mamnoon-updates/public/' => array(
+		// http://localhost:8888/joe-mamnoon-updates/public/
+		// http://localhost:8888/joe-mamnoon-updates/public/
+
+		'siteUrl' => 'http://localhost:8888/joe-mamnoon-updates/public/',
 		'devMode' => true,
 		'cache'   => true,
 		'environmentVariables' => array(
 			'basePath' => $_SERVER['DOCUMENT_ROOT'].'/',
-			'siteUrl'  => 'http://localhost:8888/',
+			'siteUrl'  => 'http://localhost:8888/joe-mamnoon-updates/public/',
 		)
 	),
 

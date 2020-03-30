@@ -4,7 +4,6 @@
 
 {% block content %}
 {% cache %}
-
 {% if craft.entries.section('announcements').limit(1) | length %}
 {% set announcement = craft.entries.section('announcements').limit(1).first() %}
 <section id="announcement">
@@ -20,7 +19,53 @@
 </section>
 {% endif %}
 
+{% cache %}
+{% if craft.entries.section('familymeal').limit(1) | length %}
+{% set familymeal = craft.entries.section('familymeal').limit(1).first() %}
 
+
+
+
+<section id="family-meal" style="padding: 50px 0px;background: #EAE6DC;">
+	<div class="container">
+			<div class="row">
+					<div class="span12">
+
+
+<h3 class="family-meal-formatting-title">
+{{ familymeal.title | raw }}
+</h3>
+
+
+<h3 class="family-meal-formatting-sub-title">
+{{ familymeal.subtitle | raw }}
+</h3>
+
+<p class="family-meal-formatting-body">
+{{ familymeal.familymealbody | raw }}
+</p>
+<br>
+
+
+<p class="family-meal-formatting-bottom-line">
+<b>{{ familymeal.bottomline | raw }}</b>
+</p>
+
+
+
+					</div>
+			</div>
+	</div>
+</section>
+
+
+
+
+
+
+
+{% endif %}
+{% endcache %}
 
 <section id="reservations">
 	<div class="container">

@@ -2373,3 +2373,41 @@ display: none;
 
 /*ot widget fix 1-2-2018*/
 
+
+
+/* family meal updates */
+
+h3.family-meal-formatting-title{
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+p.family-meal-formatting-body{
+  font-size: 22px;
+  line-height: 32px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+p.family-meal-formatting-bottom-line{
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 32px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+h3.family-meal-formatting-sub-title{
+  font-size: 24px;
+  margin-bottom: 20px;
+  font: 400 24px 'Quicksand', sans-serif;
+}
+
+/* 
+<!--{{ familymeal.title | retconAttr( 'h3', { 'class' : 'family-meal-formatting-title' }) }}-->
+
+<!--{{ familymeal.subtitle | retconAttr( 'h3', { 'class' : 'family-meal-formatting-sub-title' }) }}-->
+
+<!--{{ familymeal.body | retconAttr( 'p', { 'class' : 'family-meal-formatting-body' }) }}-->
+<br />
+<!--{{ familymeal.bottomline | retconAttr( 'p', { 'class' : 'family-meal-formatting-bottom-line' }) }}--> */
