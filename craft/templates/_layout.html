@@ -92,10 +92,65 @@
 </div>
 {% endblock %}
 
+
+<style type="text/css">
+
+#giftcardlink{
+	position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 140px;
+    height: 138px;
+	background-image: url(http://mamnoonrestaurant.com/assets/img/gift-card.gif);
+	background-repeat: no-repeat;
+	background-position: top center;
+    overflow: hidden;
+	background-size: 100%;
+color: transparent;
+
+}
+
+#giftcardlink:hover{
+    background-position: 0px 96%;
+	cursor: pointer;
+}
+
+
+@media only screen and (max-width: 960px) {
+
+
+
+	#giftcardlink{
+	position: fixed;
+    top: 20px;
+    right: 20px;
+    width: calc(.75 * 140px);
+    height: calc(.75 * 138px);
+	background-image: url(http://mamnoonrestaurant.com/assets/img/gift-card.gif);
+	background-repeat: no-repeat;
+	background-position: top center;
+    overflow: hidden;
+	background-size: 100%;
+color: transparent;
+z-index: 1000;
+}
+
+#giftcardlink:hover{
+    background-position: 0px 96%;
+	cursor: pointer;
+}
+
+
+
+}
+
+
+</style>
+
 {% include "parts/nav" %}
 
 
-	
+
 
 {% block content %}
 {% endblock %}
@@ -194,6 +249,13 @@
 	</div>
 </footer>
 
+
+<div id="giftcardlink" onclick="window.open('https://ecommerce.custcon.com/Purchase/Select?c=364cfc03-d428-44bf-b814-1efbdcaed08d'); return false;" onkeypress="window.open('https://ecommerce.custcon.com/Purchase/Select?c=364cfc03-d428-44bf-b814-1efbdcaed08d'); return false;">
+
+	gift card
+	-
+	</div>
+
 {% endblock %}
 
 
@@ -228,6 +290,12 @@
 
 <!-- uncompressed way  -->
 
+
+
+<script type="text/javascript">
+$("#giftcardlink").prev().css( "background", "#EAE6DC" );
+
+</script>
 
 {% endblock %}
 
