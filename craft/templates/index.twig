@@ -41,6 +41,22 @@
 {{ familymeal.subtitle | raw }}
 </h3>
 
+{% if familymeal.menuPicture %}
+<h3>
+{% for asset in familymeal.menuPicture %}
+     <a href="{{ asset.url }}" target="_blank" style="color: #c11637;"><u>Click Here For Our Frequently Update menu!</u></a>                             
+{% endfor %}
+</h3>
+{% else %}
+
+no link
+{% endif %}
+
+
+
+
+
+
 <p class="family-meal-formatting-body">
 {{ familymeal.familymealbody | raw }}
 </p>
