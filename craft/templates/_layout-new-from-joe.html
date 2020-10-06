@@ -28,12 +28,25 @@
 	<link href="http://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet" type="text/css">
 
 	<!-- Styles -->
-	{{ craft.minimee.css([
+	
+	<!-- minimee way that doest current work -->
+	<!-- {{ craft.minimee.css([
 			'/assets/css/style.css',
 			'/assets/css/responsive.css',
 			'/assets/css/opentable.css'
 		])
-	}}
+	}} -->
+<!-- minimee way that doest current work -->
+
+
+
+<!-- uncompressed way  -->
+
+	{% includeCssFile "/assets/css/style.css" %}
+	{% includeCssFile "/assets/css/responsive.css" %}
+	{% includeCssFile "/assets/css/opentable.css" %}
+
+<!-- uncompressed way  -->
 
 	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
@@ -81,6 +94,9 @@
 
 {% include "parts/nav" %}
 
+
+	
+
 {% block content %}
 {% endblock %}
 
@@ -90,9 +106,10 @@
 		<div class="row">
 			<div class="span12">
 				<h2>like us</h2>
+				<br>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row desktop-social">
 			<div class="span2 offset3">
 				<p>
 					<a href="https://twitter.com/mamnoontoo" target="_blank" class="twitter" onclick="_gaq.push(['_trackEvent', 'action', 'social', 'social-twitter'])">Visit our Twitter page</a>
@@ -109,6 +126,21 @@
 				</p>
 			</div>
 		</div>
+
+
+		<div class="row mobile-social">
+			<div class="span12 offset3">
+				<p>
+					<a href="https://twitter.com/mamnoontoo" target="_blank" class="twitter" onclick="_gaq.push(['_trackEvent', 'action', 'social', 'social-twitter'])">Visit our Twitter page</a>
+					&nbsp;
+					<a href="http://facebook.com/mamnoonrestaurant" target="_blank" class="facebook" onclick="_gaq.push(['_trackEvent', 'action', 'social', 'social-facebook'])">Visit our Facebook page</a>
+					&nbsp;
+					<a href="http://instagram.com/mamnoonrestaurant" target="_blank" class="instagram" onclick="_gaq.push(['_trackEvent', 'action', 'social', 'social-instagram'])">Visit our Instagram page</a>
+				</p>
+			</div>
+		</div>
+
+
 	</div>
 </div>
 {% endblock %}
@@ -138,6 +170,16 @@
 </div>
 {% endblock %}
 
+
+<!-- {% if blogpagevariable %}
+<!--nothing-->
+{% else %}
+{% include "mailerform.html" %}
+{% endif %}
+
+ <!-- -->
+
+
 {% block footer %}
 
 <footer id="foot">
@@ -158,16 +200,35 @@
 {% block globalScripts %}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
-{{ craft.minimee.js([
+
+<!-- minimee way that doest current work -->
+<!-- {{ craft.minimee.js([
 		'/assets/js/swipe.min.js',
 		'/assets/js/jquery.scrolldepth.min.js',
 		'/assets/js/bootstrap.min.js',
 		'/assets/js/bootstrap-transition.js',
-		'/assets/js/unslider.js',
-		'/assets/js/jquery.sticky.js',
-		'/assets/js/mamnoon.js'
+		'/assets/js/unslider.min.js',
+		'/assets/js/jquery.sticky.min.js',
+		'/assets/js/mamnoon.min.js'
 	])
-}}
+}} -->
+<!-- minimee way that doest current work -->
+
+
+
+<!-- uncompressed way  -->
+
+<script type="text/javascript" src="/assets/js/swipe.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.scrolldepth.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap-transition.js"></script>
+<script type="text/javascript" src="/assets/js/unslider.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.sticky.min.js"></script>
+<script type="text/javascript" src="/assets/js/mamnoon.min.js"></script>
+
+<!-- uncompressed way  -->
+
+
 {% endblock %}
 
 {% block script %}
